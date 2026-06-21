@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar" id="sidebar">
+
+        <h2>Task Manager</h2>
+
+        <p class="quote">
+            "Small steps every day lead to big changes."
+        </p>
+
+        <div class="current-date" id="currentDate"></div>
+
+        <!-- Desktop Search -->
+
+        <div class="sidebar-search">
+
+            <input type="text" id="desktopSearch" placeholder="Search Tasks">
+
+        </div>
+
+        <!-- Menu -->
+
+        <div class="menu-item active" data-page="all">
+
+            <i class="fa-solid fa-list"></i>
+            All Tasks
+
+        </div>
+
+        <div class="menu-item" data-page="pending">
+
+            <i class="fa-solid fa-clock"></i>
+            Pending
+
+        </div>
+
+        <div class="menu-item" data-page="completed">
+
+            <i class="fa-solid fa-check"></i>
+            Completed
+
+        </div>
+
+        <div class="menu-item" data-page="calendar">
+
+            <i class="fa-solid fa-calendar-days"></i>
+            Calendar
+
+        </div>
+
+        <div class="menu-item" data-page="notes">
+
+            <i class="fa-solid fa-note-sticky"></i>
+            Notes
+
+        </div>
+
+        <!-- Dark Mode -->
+
+        <div class="menu-item" id="themeBtn">
+
+            <i class="fa-solid fa-moon"></i>
+            Dark Mode
+
+        </div>
+
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <!-- Mobile Hamburger -->
+
+            <button id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <!-- Mobile Search -->
+
+            <input type="text" id="searchInput" placeholder="Search Tasks">
+
+        </div>
+
+        <!-- TASK PAGE -->
+
+        <div id="taskPage">
+            <div class="stats-container">
+
+                <div class="stat-card">
+
+                    <h3>Total</h3>
+
+                    <span id="totalTasks">
+                        0
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>Pending</h3>
+
+                    <span id="pendingTasks">
+                        0
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>Completed</h3>
+
+                    <span id="completedTasks">
+                        0
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>Priority</h3>
+
+                    <span id="highPriorityTasks">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+            <div class="add-task">
+
+                <input type="text" id="taskInput" placeholder="Enter Task">
+
+                <input type="date" id="dueDate">
+
+                <select id="priority">
+
+                    <option value="High">
+                        High
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                </select>
+
+                <button id="addBtn">
+                    Add Task
+                </button>
+
+            </div>
+
+            <div id="taskContainer"></div>
+
+        </div>
+
+        <!-- CALENDAR PAGE -->
+
+        <div id="calendarPage">
+
+            <h2>Task Calendar</h2>
+
+            <div class="calendar-box">
+
+                <input type="date" id="taskDate">
+
+            </div>
+
+            <div id="calendarTasks"></div>
+
+        </div>
+
+        <!-- NOTES PAGE -->
+
+        <div id="notesPage">
+
+            <h2>My Notes</h2>
+
+            <textarea id="notesArea" placeholder="Write your notes here..."></textarea>
+
+            <button id="saveNotes">
+
+                Save Notes
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
