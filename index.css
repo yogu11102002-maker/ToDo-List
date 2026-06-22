@@ -403,3 +403,37 @@ body.dark #dueDate,#priority{
     background:#f3f3f3;
     font-size:17px;
 }
+@media(max-width:768px){
+
+    .stats-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+        margin-bottom:20px;
+    }
+
+    .stat-card{
+        padding:10px;
+        border-radius:14px;
+    }
+
+    .stat-card h3{
+        font-size:13px;
+    }
+    @media(max-width:768px){
+
+    #taskInput,
+    #dueDate,
+    #priority,
+    #addBtn{
+        width:100%;
+        font-size:14px;
+        padding:12px;
+    }
+
+    }
+
+    .stat-card span{
+        font-size:20px;
+    }
+
+}
